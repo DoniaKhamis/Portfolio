@@ -7,9 +7,30 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans min-h-screen relative overflow-x-hidden">
+<body class="bg-blue-200 text-slate-100 font-sans min-h-screen relative overflow-x-hidden">
 
     <canvas id="visual-background" class="fixed inset-0 -z-10 w-full h-full"></canvas>
+
+    <!-- Main Page -->
+    <div id="main-page" class="fixed inset-0 z-20">
+        <!-- Circle Buttons Section -->
+        <section id="circle-buttons" class="fixed inset-0">
+            <button class="circle-btn" id="circle-1" data-label="Circle 1" style="background-image: url('https://via.placeholder.com/200/FF6B6B/FFFFFF?text=1')"></button>
+            <button class="circle-btn" id="circle-2" data-label="Circle 2" style="background-image: url('https://via.placeholder.com/200/4ECDC4/FFFFFF?text=2')"></button>
+            <button class="circle-btn" id="circle-3" data-label="Circle 3" style="background-image: url('https://via.placeholder.com/200/45B7D1/FFFFFF?text=3')"></button>
+        </section>
+    </div>
+
+    <!-- White Page for Button Action -->
+    <div id="detail-page" class="fixed inset-0 z-20 bg-white hidden flex items-center justify-center transition-all duration-500">
+        <button id="back-arrow" class="absolute top-8 left-8 text-4xl text-gray-700 hover:text-gray-900 transition-colors" aria-label="Go back">
+            ←
+        </button>
+        <div class="text-center">
+            <h2 class="text-3xl font-bold text-gray-800">Detail Page</h2>
+            <p class="text-gray-600 mt-4">Click the arrow to go back</p>
+        </div>
+    </div>
 
     <main class="max-w-3xl mx-auto px-6 py-16 relative z-10">
         
@@ -17,9 +38,7 @@
             <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
                 Engineering Timeline
             </h1>
-            <p class="mt-4 text-lg text-slate-400">An appreciation journey for you and me! 
-                <br class="hidden sm:inline">
-                ~ Because my brain's cache clears every few months. ✨💻</p>
+            <p class="mt-4 text-lg text-slate-400">My Coding Journey Highlights</p>
         </header>
 
         <section id="timeline-container" class="relative border-l-2 border-indigo-500/40 ml-4 pl-8 space-y-16">

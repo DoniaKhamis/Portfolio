@@ -14,5 +14,44 @@
 
 /* Add a subtle glow effect to the timeline dots */
 .timeline-dot {
-    box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
+    box-shadow: 0 0 12px rgba(223, 234, 234, 0.6);
 }
+
+/* Circle Button Styles */
+.circle-btn {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.circle-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease;
+    border-radius: 50%;
+}
+
+.circle-btn:hover::before {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.circle-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(235, 200, 200, 0.7);
+}
+
+.circle-btn:active {
+    transform: scale(0.95);
+}
+

@@ -12,7 +12,7 @@
     <canvas id="visual-background" class="fixed inset-0 -z-10 w-full h-full"></canvas>
 
     <!-- Main Page -->
-    <div id="main-page" class="fixed inset-0 z-20 flex items-center justify-center pointer-events-none">
+    <!-- <div id="main-page" class="fixed inset-0 z-20 flex items-center justify-center pointer-events-none">
         
         <section id="circle-buttons" class="w-full max-w-5xl flex justify-around items-center px-12 pointer-events-auto">
             <button class="circle-btn" id="circle-1" data-label="Wormhole">Wormhole</button>
@@ -20,8 +20,25 @@
             <button class="circle-btn" id="circle-3" data-label="Circle 3">Project Three</button>
         </section>
 
+    </div> -->
+    <div id="main-page" class="fixed inset-0 z-20 flex items-center justify-center pointer-events-none">
+        
+        <section id="circle-buttons" class="w-full max-w-5xl flex justify-around items-center px-12 pointer-events-auto">
+            
+            <div class="portfolio-item-group group relative flex flex-col items-center cursor-pointer" data-label="Wormhole">
+                <button class="circle-btn pointer-events-none"id="circle-1">Wormhole</button>    
+            </div>
+            
+            <div class="portfolio-item-group group relative flex flex-col items-center cursor-pointer" data-label="3D Earth">
+                <button class="circle-btn pointer-events-none" id="circle-2" style="background-image: url('https://via.placeholder.com/200/4ECDC4/FFFFFF?text=2')">3D Earth</button>
+            </div>
+            
+            <div class="portfolio-item-group group relative flex flex-col items-center cursor-pointer" data-label="Circle 3">
+                <button class="circle-btn pointer-events-none" id="circle-3" style="background-image: url('https://via.placeholder.com/200/45B7D1/FFFFFF?text=3')">Project Three</button>
+            </div>
+            
+        </section>
     </div>
-
     <!-- White Page for Button Action -->
     <div id="detail-page" class="fixed inset-0 z-20 bg-white hidden flex flex-col items-center justify-start p-12 transition-all duration-500">
         <button id="back-arrow" class="absolute top-8 left-8 text-4xl text-gray-700 hover:text-gray-900 transition-colors" aria-label="Go back">

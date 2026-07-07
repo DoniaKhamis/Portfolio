@@ -1,5 +1,5 @@
 // Handle circle button clicks
-const circleButtons = document.querySelectorAll('.circle-btn');
+const circleButtons = document.querySelectorAll('.portfolio-item-group');
 const mainPage = document.getElementById('main-page');
 const detailPage = document.getElementById('detail-page');
 const backArrow = document.getElementById('back-arrow');

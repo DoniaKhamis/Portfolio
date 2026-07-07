@@ -1,3 +1,12 @@
+/* Container that fills the screen and keeps your buttons perfectly centered */
+#main-page {
+    display: flex;
+    justify-content: space-around; /* Automatically spreads them across the width */
+    align-items: center;
+    width: 100vw;
+    padding: 0 10%;                /* Keeps them from hitting the absolute edge of the glass */
+}
+
 /* Custom smooth fade-in animation for timeline items */
 .timeline-item {
     opacity: 0;
@@ -17,17 +26,16 @@
     box-shadow: 0 0 12px rgba(223, 234, 234, 0.6);
 }
 
-/* Circle Button Styles */
+/* Circle Button Styles - Maintained your exact visuals and animations */
 .circle-btn {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     border: none;
     cursor: pointer;
     background-size: cover;
     background-position: center;
-    position: absolute;
-    
+    position: relative; 
     transition: all 0.3s ease;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     overflow: hidden;
@@ -55,3 +63,39 @@
     transform: scale(0.95);
 }
 
+/* Responsive Rule: Stacks the buttons vertically on smaller screens (like smartphones) */
+@media (max-width: 650px) {
+    #main-page {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .circle-btn {
+        width: 150px;
+        height: 150px;
+    }
+}
+/* Position the title text directly below the circle */
+.project-title {
+    position: absolute;
+    bottom: -40px; /* Pushes the text safely outside and below the circle */
+    left: 50%;
+    transform: translateX(-50%) translateY(10px); /* Centers the text and prepares a subtle slide up */
+    
+    /* Typography & Styling */
+    color: #f1f5f9; /* Slate-100 to match your theme */
+    font-size: 1.1rem;
+    font-weight: 600;
+    white-space: nowrap; /* Prevents long titles from breaking into two lines */
+    
+    /* Reveal Animation Physics */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+/* When the mouse enters the circle container, reveal the title! */
+.circle-btn:hover .project-title {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0); /* Slides up smoothly into its final spot */
+}

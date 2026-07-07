@@ -12,36 +12,39 @@
     <canvas id="visual-background" class="fixed inset-0 -z-10 w-full h-full"></canvas>
 
     <!-- Main Page -->
-    <div id="main-page" class="fixed inset-0 z-20">
-        <!-- Circle Buttons Section -->
-        <section id="circle-buttons" class="fixed inset-0">
-            <button class="circle-btn" id="circle-1" data-label="Circle 1" style="background-image: url('https://via.placeholder.com/200/FF6B6B/FFFFFF?text=1')"></button>
-            <button class="circle-btn" id="circle-2" data-label="Circle 2" style="background-image: url('https://via.placeholder.com/200/4ECDC4/FFFFFF?text=2')"></button>
-            <button class="circle-btn" id="circle-3" data-label="Circle 3" style="background-image: url('https://via.placeholder.com/200/45B7D1/FFFFFF?text=3')"></button>
+    <div id="main-page" class="fixed inset-0 z-20 flex items-center justify-center pointer-events-none">
+        
+        <section id="circle-buttons" class="w-full max-w-5xl flex justify-around items-center px-12 pointer-events-auto">
+            <button class="circle-btn" id="circle-1" data-label="Wormhole">Wormhole</button>
+            <button class="circle-btn" id="circle-2" data-label="3D Earth">3D Earth</button>
+            <button class="circle-btn" id="circle-3" data-label="Circle 3">Project Three</button>
         </section>
+
     </div>
 
     <!-- White Page for Button Action -->
-    <div id="detail-page" class="fixed inset-0 z-20 bg-white hidden flex items-center justify-center transition-all duration-500">
+    <div id="detail-page" class="fixed inset-0 z-20 bg-white hidden flex flex-col items-center justify-start p-12 transition-all duration-500">
         <button id="back-arrow" class="absolute top-8 left-8 text-4xl text-gray-700 hover:text-gray-900 transition-colors" aria-label="Go back">
             ←
         </button>
-        <div class="text-center">
-            <h2 class="text-3xl font-bold text-gray-800">Detail Page</h2>
-            <p class="text-gray-600 mt-4">Click the arrow to go back</p>
+        
+        <div class="text-center mb-6">
+            <h2 class="text-3xl font-bold text-gray-800">Project View</h2>
         </div>
+
+        <div id="project-frame-container" class="w-full max-w-5xl grow mt-4"></div>
     </div>
 
     <main class="max-w-3xl mx-auto px-6 py-16 relative z-10">
         
         <header class="mb-20 text-center">
-            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-                Engineering Timeline
+            <h1 class="text-5xl sm:text-6xl font-bold tracking-tight leading-tight pb-2 bg-gradient-to-r from-indigo-500 to-cyan-500 bg-clip-text text-transparent">
+            Engineering Timeline
             </h1>
-            <p class="mt-4 text-lg text-slate-400">My Coding Journey Highlights</p>
+            <p class="mt-4 text-lg text-slate-500">The Start Of My Frontend Journey</p>
         </header>
 
-        <section id="timeline-container" class="relative border-l-2 border-indigo-500/40 ml-4 pl-8 space-y-16">
+        <section id="timeline-container" class="relative border-l-2 border-indigo-500/40 ml-4 pl-8 space-y-12">
             </section>
 
     </main>
